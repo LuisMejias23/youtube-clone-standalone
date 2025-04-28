@@ -1,0 +1,113 @@
+/* Estilos para el contenedor principal del cuerpo y su contenido */
+.body-container {
+  display: flex;
+  margin-top: 56px;
+}
+
+/* Estilos para el contenido principal cuando la barra lateral está colapsada */
+.collapsed-main {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+}
+
+/* Estilos para el contenido principal cuando la barra lateral está expandida */
+.expanded-main {
+  margin-left: 72px;
+  width: calc(100% - 72px);
+}
+
+/* Estilos para ocultar la barra lateral */
+.hidden-sidebar {
+  visibility: hidden;
+  width: 72px;
+}
+
+/* Estilos para la barra lateral principal */
+.sidebar {
+  visibility: visible;
+  position: fixed;
+  overflow-y: auto;
+}
+
+/* Estilos para la barra de filtro de categorías */
+.filtro-categorias {
+  position: sticky;
+  top: 56px;
+  background-color: white;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 8px 0px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Estilos para el contenido principal con scroll vertical */
+.main-content {
+  overflow-y: auto;
+}
+
+/* Estilos para la barra lateral colapsada (iconos) */
+.collapsed-sidebar {
+  top: 56px;
+  width: 72px;
+  background-color: white;
+  padding: 10px 0;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.collapsed-sidebar ul {
+  position: relative;
+  bottom: 17px;
+  list-style: none;
+  padding: 0;
+  margin-top: auto;
+}
+
+.collapsed-sidebar li {
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.collapsed-sidebar li:hover {
+  background-color: #f2f2f2;
+}
+
+.collapsed-sidebar img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Media query para pantallas de hasta 1312px de ancho */
+@media (max-width: 1312px) {
+  .sidebar {
+    display: none;
+  }
+
+  .col-main {
+    margin-left: 72px;
+    width: calc(100% - 72px);
+  }
+}
+
+/* Media query para pantallas de hasta 768px de ancho (móvil) */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .col-main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .mobile-icon-sidebar {
+    display: none;
+  }
+}

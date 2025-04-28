@@ -1,1 +1,84 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+Este archivo SCSS define estilos globales para la aplicación, incluyendo importaciones de bibliotecas,
+estilos para el body, la barra de desplazamiento, y el modo oscuro.
+*/
+
+// Importaciones de la biblioteca Font Awesome para iconos.
+@import "@fortawesome/fontawesome-free/scss/fontawesome"; // Importa los estilos base de Font Awesome.
+@import "@fortawesome/fontawesome-free/scss/solid";     // Importa los estilos de los iconos sólidos.
+@import "@fortawesome/fontawesome-free/scss/brands";    // Importa los estilos de los iconos de marcas (ej., redes sociales).
+
+// Importaciones de fuentes de Google Fonts.
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");       // Importa la fuente Roboto con diferentes pesos.
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap");    // Importa la fuente Open Sans con diferentes pesos.
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");             // Importa la fuente Lato con diferentes pesos.
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");       // Importa la fuente Montserrat con diferentes pesos.
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap");    // Importa la fuente Nunito Sans con diferentes pesos.
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");          // Importa la fuente Poppins con diferentes pesos.
+
+// Estilos base para los elementos html y body.
+html,
+body {
+  height: 100%; // Asegura que el html y el body ocupen toda la altura de la ventana.
+  margin: 0;  // Elimina los márgenes predeterminados del navegador.
+  padding: 0; // Elimina el relleno predeterminado del navegador.
+}
+
+// Clase para bloquear el desplazamiento del body.
+body.block-scroll {
+  position: fixed;        // Fija la posición del body para evitar el desplazamiento.
+  width: 100%;          // Asegura que el body ocupe todo el ancho.
+  overflow-y: scroll !important; // Fuerza la barra de desplazamiento vertical (útil cuando se manipula la visibilidad del contenido).
+  top: 0;               // Establece la posición superior a 0.
+  left: 0;              // Establece la posición izquierda a 0.
+}
+
+// Estilos para la barra de desplazamiento personalizada (para navegadores WebKit como Chrome y Safari).
+::-webkit-scrollbar {
+  width: 8px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1; 
+  border-radius: 4px;       
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff; 
+}
+
+// Estilos para el modo oscuro aplicados al body cuando tiene la clase 'dark-mode'.
+body.dark-mode {
+  background-color: #0f0f0f; 
+  color: white;            
+}
+
+// Estilos para elementos específicos en modo oscuro.
+body.dark-mode .account-menu {
+  background-color: #212121; 
+}
+
+body.dark-mode .header-container {
+  background-color: #212121; // Color de fondo oscuro para el encabezado.
+  color: #ffffff;            // Color de texto blanco para el encabezado.
+}
+
+body.dark-mode .sidebar-container {
+  background-color: #181818; // Color de fondo oscuro para la barra lateral.
+  color: #ffffff;            // Color de texto blanco para la barra lateral.
+}
+
+body.dark-mode .navegacion-horizontal {
+  background-color: #181818; // Color de fondo oscuro para la navegación horizontal.
+  color: #ffffff;            // Color de texto blanco para la navegación horizontal.
+}
+
+body.dark-mode .lista-categorias {
+  background-color: #181818; // Color de fondo oscuro para la lista de categorías.
+  color: #ffffff;            // Color de texto blanco para la lista de categorías.
+}
+
+body.dark-mode .collapsed-sidebar {
+  background-color: #181818; // Color de fondo oscuro para la barra lateral colapsada.
+  color: #ffffff;            // Color de texto blanco para la barra lateral colapsada.
+}

@@ -1,0 +1,244 @@
+/* Estilos para la barra lateral móvil y su overlay */
+.mobile-sidebar-overlay {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  width: 240px;
+  height: calc(100vh - 56px);
+  background-color: white;
+  z-index: 1000;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenido dentro de la barra lateral móvil overlay */
+.mobile-sidebar-content {
+  padding: 10px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  display: flex;
+  flex-direction: column;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    padding: 0px -3px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+
+    span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &:hover {
+      background-color: #f2f2f2;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin-right: 15px;
+    }
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 8px 0;
+  }
+
+  footer {
+    padding: 24.3px;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .links-primary,
+  .links-secondary {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+
+    a {
+      color: #606060;
+      font-size: 13px;
+      font-weight: 500;
+      margin-right: 9px;
+      text-decoration: none;
+      font-family: Roboto, Arial, sans-serif;
+
+      &:hover {
+        text-decoration: underline;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .links-secondary {
+    a {
+      margin-right: 10px;
+    }
+  }
+
+  .copyright {
+    position: relative;
+    top: 17px;
+    color: #606060;
+    font-size: 15px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 56px);
+  padding-top: 0;
+}
+
+h3 {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  left: 22px;
+}
+
+.tu-con-icono {
+  display: flex;
+  align-items: center;
+}
+
+.tu-con-icono h3 {
+  margin-right: 33px;
+}
+
+.tu-con-icono i {
+  position: relative;
+  top: 2px;
+  font-size: 0.7em;
+}
+
+/* Fondo oscuro que aparece cuando la barra lateral móvil está visible */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  pointer-events: none;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+/* Barra lateral móvil principal */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: -240px;
+  width: 240px;
+  height: 100vh;
+  background: white;
+  z-index: 999;
+  transition: left 0.2s ease;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &:hover {
+    scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+  }
+
+  &.visible {
+    left: 0;
+  }
+}
+
+/* Encabezado dentro de la barra lateral móvil */
+.sidebar-header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 56px;
+}
+
+.logo {
+  justify-content: center;
+  display: flex;
+  position: relative;
+  right: 4px;
+  align-items: center;
+  height: 26px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  transform: scaleX(0.7);
+}
+
+.logo img {
+  width: 40px;
+  height: 20px;
+  margin-right: 3px;
+}
+
+.hamburguesa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  width: 25px;
+  height: 25px;
+  color: #606060;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: white;
+  transition: background-color 0.2s ease;
+  &:hover {
+    background-color: #d3d3d3;
+  }
+}
+
+.hamburguesa i.fas.fa-bars {
+  font-size: 26px;
+  font-weight: 700;
+  transform: scaley(0.7);
+}
+
+/* Media query para ocultar la barra lateral móvil en pantallas grandes */
+@media (min-width: 1314px) {
+  .mobile-sidebar,
+  .backdrop {
+    display: none !important;
+  }
+}

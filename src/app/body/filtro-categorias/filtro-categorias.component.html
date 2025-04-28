@@ -1,0 +1,28 @@
+<div class="navegacion-horizontal">
+  <div class="button-left">
+    <button
+      class="scroll-izquierda"
+      (click)="scrollIzquierda()"
+      *ngIf="mostrarBotonIzquierda"
+    >
+      <i class="fas fa-chevron-left"></i>
+    </button>
+  </div>
+  <div class="fade-left" *ngIf="mostrarBotonIzquierda"></div>
+  <ul class="lista-categorias" #lista (scroll)="verificarScroll()">
+    <li
+      *ngFor="let cat of categorias"
+      class="categoria"
+      [class.activa]="cat === categoriaSeleccionada"
+      (click)="seleccionarCategoria(cat)"
+    >
+      {{ cat }}
+    </li>
+  </ul>
+
+  <div class="button-right">
+    <button class="scroll-derecha" (click)="scrollDerecha()">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+</div>

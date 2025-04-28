@@ -1,0 +1,53 @@
+/* Estilos para la tarjeta individual de video */
+.video-card {
+  border-radius: 8px;
+  background-color: white;
+  overflow: hidden;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.video-card:hover {
+  background-color: rgb(221, 221, 235);
+  box-shadow: rgb(221, 221, 235) 0px 0px 8px 10px;
+}
+
+/* Estilos para el contenedor de la miniatura del video */
+.thumbnail {
+  width: 100%;
+  height: 180px;
+  background-color: #ddd;
+}
+
+/* Estilos para los detalles del video (título, canal, vistas) */
+.video-details {
+  padding: 12px;
+}
+
+/* Estilos para el título del video */
+.video-details h3 {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Estilos para los párrafos de información del video (canal, vistas) */
+.video-details p {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 14px;
+  color: #606060;
+  margin-bottom: 4px;
+}
+
+/* Estilos para la imagen de la miniatura del video */
+.video-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}

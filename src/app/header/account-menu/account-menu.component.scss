@@ -1,0 +1,116 @@
+/* Estilos para el menú de la cuenta */
+.account-menu {
+  position: absolute;
+  top: 10px;
+  right: 70px;
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: all 0.3s ease;
+  font-family: "Roboto", sans-serif;
+  max-height: 80vh;
+  overflow: hidden;
+  flex-direction: column;
+
+  .menu-scroll-container {
+    max-height: calc(80vh - 73px);
+    overflow-y: auto;
+    padding-right: 8px;
+
+    overscroll-behavior: contain;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 3px;
+    }
+  }
+
+  &.open {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+/* Estilos para el encabezado del menú de la cuenta */
+.account-header {
+  display: flex;
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+/* Estilos para el avatar de la cuenta */
+.account-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2289ff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 16px;
+}
+
+/* Estilos para los detalles de la cuenta (nombre de usuario, etc.) */
+.account-details {
+  font-size: 14px;
+}
+
+/* Estilos para el nombre de la cuenta */
+.account-name {
+  font-weight: 500;
+}
+
+/* Estilos para el nombre de usuario de la cuenta */
+.account-username {
+  color: #606060;
+  font-size: 13px;
+}
+
+/* Estilos para la información del canal de la cuenta */
+.account-canal {
+  position: relative;
+  top: 5px;
+  padding: 0;
+}
+
+/* Estilos para las secciones del menú */
+.menu-section {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Estilos para cada item del menú */
+.menu-item {
+  padding: 10px 24px;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background: #f9f9f9;
+  }
+
+  strong {
+    font-weight: 500;
+  }
+}

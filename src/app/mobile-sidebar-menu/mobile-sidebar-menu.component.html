@@ -1,0 +1,176 @@
+<div class="backdrop" [class.visible]="isOpen" (click)="closeMenu.emit()"></div>
+<div class="mobile-sidebar" [class.visible]="isOpen">
+  <div class="sidebar-header">
+    <div class="close-btn hamburguesa" (click)="closeMenu.emit()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="logo-container">
+      <div class="logo">
+        <img src="assets/images/icons/youtube-logo.png" alt="YouTube Logo" />
+        YouTube
+      </div>
+    </div>
+  </div>
+  <div class="mobile-sidebar-content">
+    <ul>
+      <li>
+        <img src="assets/images/icons/home.png" alt="Inicio Icono" />
+        <span>Inicio</span>
+      </li>
+      <li>
+        <img src="assets/images/icons/shorts.png" alt="Shorts Icono" />
+        <span>Shorts</span>
+      </li>
+      <li>
+        <img
+          src="assets/images/icons/subscriptions.png"
+          alt="Suscripciones Icono"
+        />
+        <span>Suscripciones</span>
+      </li>
+      <hr />
+      <div class="tu-con-icono">
+        <h3 class="h3">Tú</h3>
+        <i class="fas fa-chevron-right"></i>
+      </div>
+      <li>
+        <img src="assets/images/icons/historial.png" alt="Historial Icono" />
+        <span>Historial</span>
+      </li>
+      <hr />
+      <li>
+        <img
+          src="assets/images/icons/lista-reproduccion.png"
+          alt="Lista de reproducción Icono"
+        />
+        <span>Lista de reproducción</span>
+      </li>
+      <li>
+        <img src="assets/images/icons/mis-videos.png" alt="Mis vídeos Icono" />
+        <span>Mis vídeos</span>
+      </li>
+      <li>
+        <img
+          src="assets/images/icons/ver-mas-tarde.png"
+          alt="Ver más tarde Icono"
+        />
+        <span>Ver más tarde</span>
+      </li>
+      <li>
+        <img
+          src="assets/images/icons/videos-gustan.png"
+          alt="Vídeos que me gustan Icono"
+        />
+        <span>Vídeos que me gustan</span>
+      </li>
+      <hr />
+      <h3>Suscripciones</h3>
+      <hr />
+      <h3>Explorar</h3>
+      <hr />
+      <li>
+        <img src="assets/images/icons/tendencias.png" alt="Tendencias Icono" />
+        <span>Tendencias</span>
+      </li>
+      <li>
+        <img src="assets/images/icons/musica.png" alt="Música Icono" />
+        <span>Música</span>
+      </li>
+      <li>
+        <img
+          src="assets/images/icons/videojuegos.png"
+          alt="Videojuegos Icono"
+        />
+        <span>Videojuegos</span>
+      </li>
+      <li>
+        <img src="assets/images/icons/deportes.png" alt="Deportes Icono" />
+        <span>Deportes</span>
+      </li>
+      <li>
+        <img
+          src="assets/images/icons/aprendizaje.png"
+          alt="Aprendizaje Icono"
+        />
+        <span>Aprendizaje</span>
+      </li>
+      <hr />
+      <h3>Más de Youtube</h3>
+      <li>
+        <img
+          src="assets/images/icons/youtube-premium.png"
+          alt="YouTube Premium Icono"
+        />
+        <span>YouTube Premium</span>
+      </li>
+      <li>
+        <img
+          src="assets/images/icons/youtube-studio.png"
+          alt="YouTube Studio Icono"
+        />
+        <span>YouTube Studio</span>
+      </li>
+      <li>
+        <img
+          src="assets/images/icons/youtube-music.png"
+          alt="YouTube Music Icono"
+        />
+        <span>YouTube Music</span>
+      </li>
+      <li>
+        <img
+          src="assets/images/icons/youtube-kids.png"
+          alt="YouTube Kids Icono"
+        />
+        <span>YouTube Kids</span>
+      </li>
+      <hr />
+      <li>
+        <img
+          src="assets/images/icons/configuracion.png"
+          alt="Configuración Icono"
+        />
+        <span>Configuración</span>
+      </li>
+      <li>
+        <img
+          src="assets/images/icons/historial-denuncias.png"
+          alt="Historial de denuncias Icono"
+        />
+        <span>Historial de denuncias</span>
+      </li>
+      <li>
+        <img src="assets/images/icons/ayuda.png" alt="Ayuda Icono" />
+        <span>Ayuda</span>
+      </li>
+      <li>
+        <img
+          src="assets/images/icons/enviar-sugerencias.png"
+          alt="Enviar sugerencias Icono"
+        />
+        <span>Enviar sugerencias</span>
+      </li>
+    </ul>
+    <footer>
+      <div class="links-primary">
+        <a href="http://">Información</a>
+        <a href="http://">Prensa</a>
+        <a href="http://">Derechos de autor</a>
+        <a href="http://">Contactar</a>
+        <a href="http://">Creadores</a>
+        <a href="http://">Publicidad</a>
+        <a href="http://">Desarrolladores</a>
+      </div>
+      <div class="links-secondary">
+        <a href="http://">Términos</a>
+        <a href="http://">Privacidad</a>
+        <a href="http://">Política y seguridad</a>
+        <a href="http://">Cómo funciona YouTube</a>
+        <a href="http://">Probar funciones nuevas</a>
+      </div>
+      <div class="copyright">
+        <div style="display: inline">© 2025 Google LLC</div>
+      </div>
+    </footer>
+  </div>
+</div>

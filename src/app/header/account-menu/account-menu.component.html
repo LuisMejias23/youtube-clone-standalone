@@ -1,0 +1,54 @@
+<div class="account-menu" [class.open]="isOpen" [class.dark-mode]="isDarkMode">
+  <!-- Contenedor con scroll -->
+  <div class="menu-scroll-container">
+    <!-- Sección superior -->
+    <div class="account-header">
+      <div class="account-avatar">L</div>
+      <div class="account-details">
+        <div class="account-name">Lois Hernandez</div>
+        <div class="account-username">loishernandez6492</div>
+        <div class="account-canal">
+          <a href="http://">Ver tu canal</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Secciones del menú -->
+    <div class="menu-section">
+      <div class="menu-item">Ver tu canal</div>
+    </div>
+
+    <div class="menu-section">
+      <div class="menu-item">Cuenta de Google</div>
+      <div class="menu-item">Cambiar de cuenta</div>
+      <div class="menu-item">Cerrar sesión</div>
+    </div>
+
+    <div class="menu-section">
+      <div class="menu-item">YouTube Studio</div>
+      <div class="menu-item">Compras y suscripciones</div>
+    </div>
+
+    <div class="menu-section">
+      <div class="menu-item">Tus datos en YouTube</div>
+
+      <!-- Botón para cambiar aspecto -->
+      <div class="menu-item" (click)="toggleDarkMode()">
+        <span
+          >Aspecto: <strong>{{ isDarkMode ? "oscuro" : "claro" }}</strong></span
+        >
+      </div>
+
+      <div class="menu-item">
+        <span>Idioma: <strong>Español</strong></span>
+      </div>
+      <div class="menu-item">
+        <span>Modo Restringido: <strong>desactivado</strong></span>
+      </div>
+      <div class="menu-item">
+        <span>Ubicación: <strong>Venezuela</strong></span>
+      </div>
+      <div class="menu-item">Combinaciones de teclas</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<section *ngIf="images.length > 0">
+  <div class="main-content-grid">
+    <app-video-card
+      *ngFor="let image of images"
+      [image]="image"
+    ></app-video-card>
+  </div>
+</section>

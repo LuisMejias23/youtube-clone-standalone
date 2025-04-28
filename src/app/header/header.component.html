@@ -1,0 +1,63 @@
+<div class="header-container">
+  <!-- Sección izquierda -->
+  <div class="header-left">
+    <div class="hamburguesa-container">
+      <div class="hamburguesa" (click)="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <div class="logo-container">
+      <div class="logo">
+        <img src="assets/images/icons/youtube-logo.png" alt="YouTube Logo" />
+        YouTube
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección central -->
+  <div class="header-middle">
+    <div class="search-bar-container">
+      <div class="search-input-container">
+        <div class="div-input">
+          <input type="text" placeholder="Search" />
+        </div>
+      </div>
+      <div class="search-button-container">
+        <button class="search-button-outside">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+    <div class="microphone-container">
+      <div class="microfono-icon botto-microfono">
+        <i class="fas fa-microphone"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección derecha -->
+  <div class="header-right">
+    <div class="create-button-container">
+      <div class="crear-boton"><i class="fas fa-plus"></i> Crear</div>
+    </div>
+    <div class="notifications-container">
+      <div class="notifications-icon">
+        <i class="fas fa-bell"></i>
+      </div>
+    </div>
+    <div #sidebar class="account-container">
+      <div class="mi-cuenta" (click)="toggleAccountMenu()">
+        <div class="mi-cuenta-icono">
+          <span>L</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Componentes hijos -->
+<app-mobile-sidebar-menu [isOpen]="menuOpen" (closeMenu)="onMenuClose()">
+</app-mobile-sidebar-menu>
+
+<app-account-menu [isOpen]="accountMenuOpen" (closeMenu)="onAccountMenuClose()">
+</app-account-menu>

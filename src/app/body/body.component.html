@@ -1,0 +1,30 @@
+<div class="body-container">
+  <div class="mobile-icon-sidebar collapsed-sidebar">
+    <ul>
+      <li><img src="assets/images/icons/home.png" alt="Inicio Icono" /></li>
+      <li><img src="assets/images/icons/shorts.png" alt="Shorts Icono" /></li>
+      <li>
+        <img
+          src="assets/images/icons/subscriptions.png"
+          alt="Suscripciones Icono"
+        />
+      </li>
+      <li class="tu-img"><img src="assets/images/icons/tu.png" alt="Tú Icono"/></li>
+    </ul>
+  </div>
+
+  <app-sidebar #sidebar class="sidebar hidden-sidebar"  [ngClass]="{ 'hidden-sidebar': !isSidebarVisible }"
+  *ngIf="isSidebarVisible && isDesktop"></app-sidebar>
+
+  <app-mobile-sidebar-menu
+  *ngIf="!isDesktop && !isSidebarVisible"
+></app-mobile-sidebar-menu> 
+
+<div class="col-main" [ngClass]="{ 'expanded-main': !isSidebarVisible, 'collapsed-main': isSidebarVisible }">
+  <app-filtro-categorias class="filtro-categorias"></app-filtro-categorias>
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+
+</div>

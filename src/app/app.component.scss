@@ -1,0 +1,28 @@
+/* Estilos para la estructura principal de la aplicación */
+
+// Contenedor principal de la aplicación
+.app-container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 100%;
+}
+
+// Encabezado de la aplicación
+.header {
+  position: fixed;
+  grid-row: 1;
+  grid-column: 1;
+  flex: 1;
+  min-height: 56px;
+  z-index: 100;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+// Cuerpo principal de la aplicación
+.body {
+  grid-row: 2;
+  grid-column: 1;
+  margin-top: 56px;
+  height: calc(100vh - 56px);
+}
